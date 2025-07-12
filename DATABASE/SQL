@@ -1,0 +1,77 @@
+mysql> desc cars;
++----------------------+-------------+------+-----+---------+-------+
+| Field                | Type        | Null | Key | Default | Extra |
++----------------------+-------------+------+-----+---------+-------+
+| carNumber            | varchar(13) | NO   | PRI | NULL    |       |
+| carBrandName         | varchar(20) | YES  |     | NULL    |       |
+| carModelName         | varchar(30) | YES  |     | NULL    |       |
+| carFuelType          | varchar(10) | YES  |     | NULL    |       |
+| carDateOFManufacture | date        | YES  |     | NULL    |       |
+| carTransmission      | varchar(15) | YES  |     | NULL    |       |
+| carBodytype          | varchar(20) | YES  |     | NULL    |       |
+| KilometerDriven      | int         | YES  |     | NULL    |       |
+| carPrice             | int         | YES  |     | NULL    |       |
+| carColor             | varchar(20) | YES  |     | NULL    |       |
+| carCondition         | varchar(50) | YES  |     | NULL    |       |
++----------------------+-------------+------+-----+---------+-------+
+11 rows in set (0.01 sec)
+
+mysql> desc customer;
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| cusID          | varchar(25) | YES  |     | NULL    |       |
+| cusName        | varchar(25) | YES  |     | NULL    |       |
+| cusAdd         | varchar(50) | YES  |     | NULL    |       |
+| cusPhone       | bigint      | YES  |     | NULL    |       |
+| cusPaymentMode | varchar(15) | YES  |     | NULL    |       |
+| cusEmail       | varchar(20) | YES  |     | NULL    |       |
+| cusDOB         | date        | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> desc employee;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| empID         | varchar(10) | YES  |     | NULL    |       |
+| empName       | varchar(25) | YES  |     | NULL    |       |
+| empDateOFJoin | date        | YES  |     | NULL    |       |
+| salary        | int         | YES  |     | NULL    |       |
+| jobTitle      | varchar(20) | YES  |     | NULL    |       |
+| empAdd        | varchar(50) | YES  |     | NULL    |       |
+| empEmail      | varchar(20) | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> desc sale_history;
++-------------------+-------------+------+-----+---------+-------+
+| Field             | Type        | Null | Key | Default | Extra |
++-------------------+-------------+------+-----+---------+-------+
+| buyerName         | varchar(20) | YES  |     | NULL    |       |
+| buyerAdd          | varchar(30) | YES  |     | NULL    |       |
+| buyerPhone        | int         | YES  |     | NULL    |       |
+| buyerEmail        | varchar(35) | YES  |     | NULL    |       |
+| modeoftransaction | varchar(15) | YES  |     | NULL    |       |
+| soldcarNumber     | varchar(20) | YES  | MUL | NULL    |       |
+| carModel          | varchar(25) | YES  |     | NULL    |       |
+| DatecarSold       | date        | YES  |     | NULL    |       |
+| priceofcar        | int         | YES  |     | NULL    |       |
++-------------------+-------------+------+-----+---------+-------+
+9 rows in set (0.00 sec)
+
+mysql> desc purchase_history;
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| sellerName      | varchar(20) | YES  |     | NULL    |       |
+| sellerAdd       | varchar(30) | YES  |     | NULL    |       |
+| sellerPhone     | int         | YES  |     | NULL    |       |
+| sellerEmail     | varchar(20) | YES  |     | NULL    |       |
+| boughtcarNumber | varchar(15) | YES  | MUL | NULL    |       |
+| carModel_P      | varchar(20) | YES  |     | NULL    |       |
+| datecarbought   | date        | YES  |     | NULL    |       |
+| carRange        | int         | YES  |     | NULL    |       |
+| priceofcar_P    | int         | YES  |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+9 rows in set (0.00 sec)
